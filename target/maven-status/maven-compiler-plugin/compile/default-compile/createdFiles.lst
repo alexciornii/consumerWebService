@@ -1,0 +1,8 @@
+md/liberopay/consumer/ObjectFactory.class
+md/liberopay/consumer/config/ConsumerConfig.class
+md/liberopay/consumer/service/SOAPConnector.class
+md/liberopay/consumer/package-info.class
+md/liberopay/consumer/UserDetailsRequest.class
+md/liberopay/consumer/User.class
+md/liberopay/consumer/UserDetailsResponse.class
+md/liberopay/consumer/ConsumerLauncher.class
