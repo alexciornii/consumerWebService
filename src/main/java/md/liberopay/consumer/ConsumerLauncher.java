@@ -16,21 +16,15 @@ public class ConsumerLauncher {
     @Bean
     CommandLineRunner lookup(SOAPConnector soapConnector) {
         return args -> {
-            String firstName = "Vasile";//Default firstName
-            String lastName = "Osoianu";//Default lastName
-            String address = "mun.Chisinau";//Default address
+            String id = "1";//Default id
 
             if(args.length>0){
-                firstName = args[0];
-                lastName = args[1];
-                address = args[2];
+                id = args[0];
             }
             UserDetailsRequest request = new UserDetailsRequest();
-            request.setFirstName(firstName);
-            request.setLastName(lastName);
-            request.setAddress(address);
+            request.setId(1L);
             UserDetailsResponse response = (UserDetailsResponse)
-                    soapConnector.callWebService("http://localhost:8080/service", request);
+                    soapConnector.callWebService("http://localhost:8888/service", request);
             System.out.println("Got Response As below ========= : ");
             System.out.println("First name : "+response.getUser().getFirstName());
             System.out.println("Last name : "+response.getUser().getLastName());
